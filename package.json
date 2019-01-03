@@ -11,7 +11,7 @@
     "watch-js": "watchify -t babelify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field --exclude electron src/js/app.js -o dist/js/app.js -v",
     "watch-scss": "node-sass -w src/scss/app.scss dist/css/app.css",
     "watch": "npm run build && npm run watch-js & npm run watch-scss",
-    "package": "electron-packager . Gitify --overwrite --platform=darwin --arch=x64 --electron-version=1.6.10 --asar=true --icon=images/app-icon.icns --prune --ignore='src' --ignore='coverage'",
+    "package": "electron-packager . Gitify --overwrite --platform=darwin --arch=x64 --electron-version=4.0.0 --asar=true --icon=images/app-icon.icns --prune --ignore='src' --ignore='coverage'",
     "codesign": "bash scripts/codesign.bash",
     "dist": "npm run build && npm run package && npm run codesign",
     "lint-js": "eslint 'src/js/' 'src/js/app.js' 'main.js'",
