@@ -61,7 +61,7 @@ export class SettingsModal extends React.Component {
     if (!isEitherLoggedIn) {
       return <Redirect to="/login" />;
     }
-
+    Modal.setAppElement('#gitify');
     return (
       <Modal
         className="modal-dialog settings-modal"
