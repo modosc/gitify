@@ -13,7 +13,7 @@ import notificationsMiddlware from '../middleware/notifications';
 import settingsMiddleware from '../middleware/settings';
 import rootReducer from '../reducers';
 
-const isDev = process.mainModule.filename.indexOf('app.asar') === -1;
+const isDev = process.mainModule?.filename?.indexOf('app.asar') === -1;
 
 export default function configureStore(initialState) {
   const engine = filter(
@@ -49,6 +49,7 @@ export default function configureStore(initialState) {
 
   // Load settings from localStorage
   const load = storage.createLoader(engine);
+
   load(store).then(newState => {
     const { auth = {}, settings = {} } = newState;
     const isGitHubLoggedIn = !!auth.token;

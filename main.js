@@ -130,6 +130,7 @@ app.on('ready', function() {
       titleBarStyle: 'hidden',
       webPreferences: {
         overlayScrollbars: true,
+        nodeIntegration: true,
       },
     };
 
