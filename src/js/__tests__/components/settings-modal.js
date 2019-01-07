@@ -1,6 +1,10 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { List, Map } from 'immutable';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({
+  adapter: new Adapter(),
+});
 import renderer from 'react-test-renderer';
 
 const { ipcRenderer } = require('electron');

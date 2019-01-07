@@ -1,7 +1,11 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
 import { MemoryRouter } from 'react-router-dom';
 import { fromJS, List, Map } from 'immutable';
-import { shallow, mount } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({
+  adapter: new Adapter(),
+});
 
 const { shell, ipcRenderer } = require('electron');
 

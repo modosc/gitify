@@ -1,5 +1,7 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
-import { mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+Enzyme.configure({ adapter: new Adapter() });
 
 import AllRead from '../../components/all-read';
 
